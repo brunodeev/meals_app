@@ -1,6 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:meals/screens/categories_meals_screen.dart';
-
+import 'utils/app_routes.dart';
 import 'screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,8 +33,9 @@ class MyApp extends StatelessWidget {
           ),
         ),
         routes: {
-          '/': (context) => const CategoriesScreen(),
-          '/categories-meals': (context) => const CategoriesMealsScreen(),
+          AppRoutes.HOME: (context) => const CategoriesScreen(),
+          AppRoutes.CATEGORIES_MEALS: (context) =>
+              const CategoriesMealsScreen(),
         });
   }
 }
