@@ -1,4 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
+import 'package:meals/screens/categories_meals_screen.dart';
+
 import 'screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,25 +14,27 @@ class MyApp extends StatelessWidget {
     final ThemeData theme = ThemeData();
 
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'DeliMeals',
-      theme: theme.copyWith(
-        colorScheme: theme.colorScheme.copyWith(
-          primary: Colors.pink,
-          secondary: Colors.amber,
-        ),
-        textTheme: theme.textTheme.copyWith(
-          headline6: const TextStyle(
-            fontFamily: 'Raleway',
+        debugShowCheckedModeBanner: false,
+        title: 'DeliMeals',
+        theme: theme.copyWith(
+          colorScheme: theme.colorScheme.copyWith(
+            primary: Colors.pink,
+            secondary: Colors.amber,
           ),
-          headline5: const TextStyle(
-            fontFamily: 'RobotoCondensed',
-            fontSize: 20,
-            color: Colors.black,
+          textTheme: theme.textTheme.copyWith(
+            headline6: const TextStyle(
+              fontFamily: 'Raleway',
+            ),
+            headline5: const TextStyle(
+              fontFamily: 'RobotoCondensed',
+              fontSize: 20,
+              color: Colors.black,
+            ),
           ),
         ),
-      ),
-      home: const CategoriesScreen(),
-    );
+        routes: {
+          '/': (context) => const CategoriesScreen(),
+          '/categories-meals': (context) => const CategoriesMealsScreen(),
+        });
   }
 }
