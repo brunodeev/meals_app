@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     final ThemeData theme = ThemeData();
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
